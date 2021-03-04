@@ -2,7 +2,7 @@ using NAND_Prog;
 using System;
 using System.ComponentModel.Composition;
 
-namespace K9F1G08U0D
+namespace MX30LF1G18AC
 {
     /*
      use the design :
@@ -27,7 +27,7 @@ namespace K9F1G08U0D
         ChipAssembly()
         {
             myChip.devManuf = "SAMSUNG";
-            myChip.name = "K9F1G08U0D";
+            myChip.name = "MX30LF1G18AC";
             myChip.chipID = "ECF1001540";      // device ID - ECh F1h 00h 15h 40h (k9f1g08u0d_00.pdf page 36)
 
             myChip.width = Organization.x8;    // chip width - 8 bit
@@ -101,7 +101,7 @@ namespace K9F1G08U0D
 
            // if (BitConverter.ToString(content).Replace("-", "") != "ECF1001540")
            // {
-           //     messsage += "This chip is not a K9F1G08U0D";
+           //     messsage += "This chip is not a MX30LF1G18AC";
            //     return messsage;
            // }
            
@@ -144,9 +144,9 @@ namespace K9F1G08U0D
                 case 1:
                     str_result += "Device ";
                     if (bt == 0xF1)
-                        str_result += "is K9F1G08U0D";
+                        str_result += "is MX30LF1G18AC";
                     else
-                        str_result += "is not K9F1G08U0D";
+                        str_result += "is not MX30LF1G18AC";
                     str_result += Environment.NewLine;
                     break;
 
