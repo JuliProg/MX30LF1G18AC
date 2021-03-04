@@ -14,13 +14,7 @@ namespace MX30LF1G18AC
     for automatically include <some code> in the READMY.md file in the repository
     */
     
-    #region Vendor Specific Pin configuration
     
-    //  VSP1(38pin) - GND    
-    //  VSP2(35pin) - NC
-    //  VSP3(20pin) - NC
-    
-    #endregion
 
     #region
     public class ChipAssembly
@@ -32,6 +26,14 @@ namespace MX30LF1G18AC
 
         #region Chip parameters
 
+       //--------------------Vendor Specific Pin configuration---------------------------
+    
+       //  VSP1(38pin) - GND    
+       //  VSP2(35pin) - NC
+       //  VSP3(20pin) - NC
+    
+    
+            
         ChipAssembly()
         {
             myChip.devManuf = "Macronix";
