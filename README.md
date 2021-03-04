@@ -10,15 +10,6 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 
 <section class = "listing">
 
-# Vendor Specific Pin configuration
-```c#
-
-    
-    //  VSP1(38pin) - GND    
-    //  VSP2(35pin) - NC
-    //  VSP3(20pin) - NC
-    
-```
 #
 ```c#
 
@@ -31,6 +22,14 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 ```c#
 
 
+       //--------------------Vendor Specific Pin configuration---------------------------
+    
+       //  VSP1(38pin) - GND    
+       //  VSP2(35pin) - NC
+       //  VSP3(20pin) - NC
+    
+    
+            
         ChipAssembly()
         {
             myChip.devManuf = "Macronix";
@@ -99,6 +98,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         
 ```
 </section>
+
 
 
 
