@@ -10,6 +10,15 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 
 <section class = "listing">
 
+# Vendor Specific Pin configuration
+```c#
+
+    
+    //  VSP1(38pin) - GND    
+    //  VSP2(35pin) - NC
+    //  VSP3(20pin) - NC
+    
+```
 #
 ```c#
 
@@ -24,9 +33,9 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 
         ChipAssembly()
         {
-            myChip.devManuf = "SAMSUNG";
+            myChip.devManuf = "Macronix";
             myChip.name = "MX30LF1G18AC";
-            myChip.chipID = "ECF1001540";      // device ID - ECh F1h 00h 15h 40h (k9f1g08u0d_00.pdf page 36)
+            myChip.chipID = "C2F1809502";      // device ID - C2h F1h 80h 95h 02h (MX30LF1G18AC, 3V, 1Gb, v1.2.pdf page 32)
 
             myChip.width = Organization.x8;    // chip width - 8 bit
             myChip.bytesPP = 2048;             // page size - 2048 byte (2Kb)
@@ -78,8 +87,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
             myChip.registers.Add(                  // https://github.com/JuliProg/Wiki/wiki/ID-Register
                 "Id Register").
                 Size(5).
-                Operations("ReadId_90h").               
-                Interpretation(ID_interpreting);
+                Operations("ReadId_90h");               
+                
 
 ```
 # Interpretation of ID-register values ​​(optional)
@@ -90,6 +99,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         
 ```
 </section>
+
 
 
 
