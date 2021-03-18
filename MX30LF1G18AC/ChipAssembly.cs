@@ -16,12 +16,12 @@ namespace MX30LF1G18AC
     
     
 
-    #region
+    
     public class ChipAssembly
     {
         [Export("Chip")]
         ChipPrototype myChip = new ChipPrototype();
-        #endregion
+        
 
 
         #region Chip parameters
